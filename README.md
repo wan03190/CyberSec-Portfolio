@@ -32,7 +32,7 @@
 ## 📁 Repository Architecture
 
 ```text
-Portfolio/
+CyberSec-Portfolio/
 ├── index.html          # Semantic DOM structure, CDN injection points, and layout architecture
 ├── profile.jpeg        # Profile photo or portfolio profile image
 ├── screenshot.png      # Project screenshot or photo
