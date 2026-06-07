@@ -1,0 +1,149 @@
+/* Custom Font Defaults */
+body {
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at center, #0b1528 0%, #030712 100%);
+    overflow: hidden;
+}
+
+/* Typography styles */
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Glassmorphism Card styling */
+.glass-card {
+    background: rgba(10, 17, 30, 0.45);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(0, 255, 136, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 255, 136, 0.05),
+                inset 0 0 20px rgba(0, 255, 136, 0.02);
+}
+
+/* Neon Text Glow Effect */
+.glow-text {
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.3),
+                 0 0 20px rgba(0, 191, 255, 0.2);
+}
+
+/* Micro-Interactive Skill Badges */
+.skill-badge {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #e2e8f0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: default;
+}
+
+.skill-badge:hover {
+    border-color: rgba(0, 255, 136, 0.4);
+    background: rgba(0, 255, 136, 0.08);
+    color: #00ff88;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.15);
+}
+
+/* Interactive Social Buttons */
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.75rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(0, 255, 136, 0.15);
+    color: #00ff88;
+    font-size: 1.1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    box-shadow: inset 0 0 10px rgba(0, 255, 136, 0.02);
+}
+
+.social-btn:hover {
+    color: #030712;
+    background: #00ff88;
+    border-color: #00ff88;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4),
+                0 0 40px rgba(0, 255, 136, 0.1);
+}
+
+/* Tech Corner Accents */
+.tech-corner {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    opacity: 0.7;
+    transition: all 0.4s ease;
+}
+
+.glass-card:hover .tech-corner {
+    width: 22px;
+    height: 22px;
+    opacity: 1;
+}
+
+/* Custom Typing Cursor blinking */
+.animate-cursor {
+    animation: blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes blink-cursor {
+    from, to { border-color: transparent }
+    50% { border-color: #00bfff }
+}
+
+/* Glowing Profile Pulse Effect */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1.02);
+        opacity: 0.35;
+        filter: blur(6px);
+    }
+    50% {
+        transform: scale(1.08);
+        opacity: 0.55;
+        filter: blur(10px);
+    }
+}
+
+/* High-tech vertical scanning line */
+.scanline {
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 255, 136, 0.08) 10%,
+        rgba(0, 255, 136, 0.15) 30%,
+        rgba(0, 255, 136, 0.25) 50%,
+        rgba(0, 255, 136, 0.15) 70%,
+        rgba(0, 255, 136, 0.08) 90%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    animation: scan 6s linear infinite;
+}
+
+@keyframes scan {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* Scrollbar elimination for extra safety */
+::-webkit-scrollbar {
+    display: none;
+}
+html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}

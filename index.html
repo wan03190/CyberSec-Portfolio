@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Portfolio</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons for modern developer & social profiles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#030712] text-[#f3f4f6] font-sans overflow-hidden w-screen h-screen relative select-none">
+
+    <!-- Digital Matrix / Particle Animated Canvas Background -->
+    <canvas id="cyber-canvas" class="absolute inset-0 w-full h-full z-0 pointer-events-none"></canvas>
+
+    <!-- Scanning Overlay Line Effect -->
+    <div class="scanline absolute inset-0 z-10 pointer-events-none opacity-[0.03]"></div>
+
+    <!-- Main Container: Flex centered to guarantee perfect centering in 100vh/100vw without scrolling -->
+    <main class="relative z-20 flex items-center justify-center w-full h-full p-4 md:p-8">
+        
+        <!-- Glassmorphism Card -->
+        <div class="glass-card relative max-w-2xl w-full flex flex-col items-center justify-between p-6 md:p-10 rounded-2xl border border-[rgba(0,255,136,0.15)] shadow-[0_0_50px_rgba(0,255,136,0.1)] text-center transition-all duration-500 overflow-hidden">
+            
+            <!-- Sleek Tech Corner Accents -->
+            <div class="tech-corner top-0 left-0 border-t-2 border-l-2 border-[#00ff88]"></div>
+            <div class="tech-corner top-0 right-0 border-t-2 border-r-2 border-[#00ff88]"></div>
+            <div class="tech-corner bottom-0 left-0 border-b-2 border-l-2 border-[#00ff88]"></div>
+            <div class="tech-corner bottom-0 right-0 border-b-2 border-r-2 border-[#00ff88]"></div>
+
+            <!-- Profile Section with pulse glow -->
+            <div class="relative mb-6">
+                <div class="profile-glow absolute inset-0 rounded-full bg-[#00ff88] blur-md opacity-40 scale-105 animate-pulse"></div>
+                <div class="relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-2 border-[#00ff88] shadow-[0_0_20px_rgba(0,255,136,0.3)] bg-[#0c1020]">
+                    <!-- If user doesn't have profile.jpg, use a beautiful fallback avatar inside js/css -->
+                    <img id="profile-img" src="profile.jpeg" alt="Profile" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" onerror="handleImageError(this)">
+                </div>
+                <!-- Status indicator badge -->
+                <span class="absolute bottom-1 right-2 flex h-4 w-4">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00ff88] opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-4 w-4 bg-[#00ff88] border-2 border-[#030712]"></span>
+                </span>
+            </div>
+
+            <!-- Profile Info & Headline -->
+            <div class="space-y-4 w-full">
+                <div class="space-y-1">
+                    <span class="text-xs uppercase tracking-[0.25em] font-mono text-[#00ff88] bg-[rgba(0,255,136,0.06)] px-3 py-1 rounded-full border border-[rgba(0,255,136,0.15)]">
+                        System Operator | Authorized Access
+                    </span>
+                    <h1 class="text-3xl md:text-4xl font-bold font-mono tracking-tight text-white mt-3">
+                        Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00ff88] to-[#00bfff] glow-text">SecOps Engineer</span>
+                    </h1>
+                </div>
+
+                <!-- Dynamic Typing Effect Area -->
+                <div class="h-8 flex items-center justify-center font-mono text-[#00bfff] text-sm md:text-base">
+                    <span class="border-r-2 border-[#00bfff] pr-1 py-0.5 animate-cursor" id="typing-text"></span>
+                </div>
+
+                <!-- About Me Text -->
+                <p class="text-sm md:text-base text-gray-300 font-normal leading-relaxed max-w-xl mx-auto">
+                    Cyber security professional with expertise in <span class="text-white font-mono font-medium">IT security</span> and <span class="text-white font-mono font-medium">system hardening</span>. Experienced in <span class="text-white font-mono font-medium">Kali Linux </span> and programming in <span class="text-white font-mono font-medium">Python</span>, <span class="text-white font-mono font-medium">Django</span>, <span class="text-white font-mono font-medium">TypeScript</span>, <span class="text-white font-mono font-medium">React</span>, <span class="text-white font-mono font-medium">C++</span>, <span class="text-white font-mono font-medium">Qt/Quick</span>, <span class="text-white font-mono font-medium">MongoDB</span> and <span class="text-white font-mono font-medium">PostgreSQL</span> to bulid secure, automated systems.
+                </p>
+
+                <!-- Skill Badges Grid -->
+                <div class="flex flex-wrap items-center justify-center gap-2 pt-2 pb-4">
+                    <span class="skill-badge"><i class="fa-solid fa-terminal mr-1.5 text-[#00ff88]"></i>Kali Linux</span>
+                    <span class="skill-badge"><i class="fa-brands fa-python mr-1.5 text-[#3776AB]"></i>Python</span>
+                    <span class="skill-badge"><i class="fa-solid fa-leaf mr-1.5 text-[#092E20]"></i>Django</span>
+                    <span class="skill-badge"><i class="fa-brands fa-js mr-1.5 text-[#F7DF1E]"></i>TypeScript</span>
+                    <span class="skill-badge"><i class="fa-brands fa-react mr-1.5 text-[#61DAFB]"></i>React</span>
+                    <span class="skill-badge"><i class="fa-solid fa-code mr-1.5 text-[#00599C]"></i>C++</span>
+                    <span class="skill-badge"><i class="fa-solid fa-cubes mr-1.5 text-[#41CD52]"></i>Qt/Quick</span>
+                    <span class="skill-badge"><i class="fa-solid fa-database mr-1.5 text-[#47A248]"></i>MongoDB</span>
+                    <span class="skill-badge"><i class="fa-solid fa-database mr-1.5 text-[#336791]"></i>PostgreSQL</span>
+                </div>
+
+                <!-- Divider -->
+                <div class="relative w-full h-[1px] bg-gradient-to-r from-transparent via-[rgba(0,255,136,0.2)] to-transparent my-4">
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-[#00ff88] rotate-45 border border-[#030712]"></div>
+                </div>
+
+                <!-- Social & Professional Links Row -->
+                <div class="flex items-center justify-center gap-5 pt-2">
+                    <a href="https://www.linkedin.com/in/iamx-ariful-islam/" target="_blank" class="social-btn group" title="LinkedIn" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in transition-all duration-300"></i>
+                    </a>
+                    <a href="https://github.com/iamx-ariful-islam" target="_blank" class="social-btn group" title="GitHub" aria-label="GitHub">
+                        <i class="fa-brands fa-github transition-all duration-300"></i>
+                    </a>
+                    <a href="https://tryhackme.com/p/iamx.ariful.islam" target="_blank" class="social-btn group" title="TryHackMe" aria-label="TryHackMe">
+                        <i class="fa-solid fa-shield-halved transition-all duration-300"></i>
+                    </a>
+                    <a href="https://www.facebook.com/iamx.ariful.islam" target="_blank" class="social-btn group" title="Facebook" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f transition-all duration-300"></i>
+                    </a>
+                    <a href="mailto:iamx.ariful.islam@gmail.com" class="social-btn group" title="Email" aria-label="Email">
+                        <i class="fa-regular fa-envelope transition-all duration-300"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
